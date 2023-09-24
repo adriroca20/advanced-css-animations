@@ -1,0 +1,87 @@
+.todo-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    gap: 10px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.todo-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.201);
+    cursor: pointer;
+    position: relative;
+    padding-left: 10px;
+}
+.todo-item > input{
+    display: none;
+}
+.todo-item > label{
+    z-index: 10;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.8s ease;
+    cursor: pointer;
+}
+.todo-item > input{
+    z-index: 10;
+}
+.todo-item > label::after{
+    content: "x";
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: red;
+}
+.todo-item > label::before{
+    background: linear-gradient(to right,transparent,var(--cyan-600),var(--teal-200));
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.done::before{
+    width: 100% !important;
+}
+.done::after{
+    content: "✓" !important;
+    color: green !important;
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+}
+/* input:checked + label::before{
+    width: 100%;
+}
+
+input:checked + label::after{
+    content: "✓";
+    color: green;
+    font-size: 1.2rem;
+    font-weight: 900;
+} */

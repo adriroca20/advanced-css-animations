@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="todo-list">
+        <div class="todo-item" *ngFor="let todo of todoList,let i = index">
+            <input type="checkbox" [id]="todo.id">
+            <label [for]="todo.id" [class]= "todo.done? 'done' : 'toDo' "(click)="toggleCompleted(i)">{{todo.content}}</label>
+        </div>
+    </div>
+
+</div>

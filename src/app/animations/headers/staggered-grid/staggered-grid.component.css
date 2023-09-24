@@ -1,0 +1,47 @@
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+.row{
+    display: flex;
+    border: 0.5px solid blue;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+input:nth-child(1){
+    width: 110px;
+}
+input:nth-child(2){
+    width: 110px;
+}
+input:nth-child(3){
+    flex-grow: 1;
+}
+input:nth-child(4){
+    flex-grow: 1;
+}
+input:nth-child(5){
+    flex-grow: 1;
+}
+input:last-child{
+    width: 110px;
+}
+.row-quantities{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+button{
+    width: 110px;
+}
+span{
+    width: 110px;
+}
+
+.row-quantities p{
+    border: 1px solid white;
+}

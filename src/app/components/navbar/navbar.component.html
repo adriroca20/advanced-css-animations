@@ -1,0 +1,5 @@
+
+<p-card header="Advanced Animations" subheader="CSS & JS">
+    <p-tieredMenu #menu [model]="items" [popup]="show"></p-tieredMenu>
+    <button pButton type="button" (click)="menu.toggle($event)" id="menu-button">Menu</button>
+</p-card>
